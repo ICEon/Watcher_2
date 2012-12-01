@@ -22,12 +22,12 @@ function Buscar_Alumno(no_control){
 
 var myObject = JSON.parse (msg);
 
-alert (myObject);
+alert (myObject[0].Nombre);
 
 $('#devic table td').eq(1).text("HOLA");
 $('#devic table td').eq(3).text("YO");
-$('#devic table td').eq(5).text(arreglo);
-$('#devic table td').eq(7).text(myObject.Nombre);
+$('#devic table td').eq(5).text(myObject[0].Nombre);
+$('#devic table td').eq(7).text(myObject[0].Nombre);
 	});
 }
 
