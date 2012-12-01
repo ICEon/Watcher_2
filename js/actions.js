@@ -1,52 +1,4 @@
 // JavaScript Document
-function inspeccionar(obj)
-
-{
-
-  var msg = '';
-
- 
-
-  for (var property in obj)
-  {
-
-    if (typeof obj[property] == 'function')
-
-    {
-
-      var inicio = obj[property].toString().indexOf('function');
-
-      var fin = obj[property].toString().indexOf(')')+1;
-
-      var propertyValue=obj[property].toString().substring(inicio,fin);
-
-      msg +=(typeof obj[property])+' '+property+' : '+propertyValue+' ;\n';
-
-    }
-
-    else if (typeof obj[property] == 'unknown')
-
-    {
-
-      msg += 'unknown '+property+' : unknown ;\n';
-
-    }
-
-    else
-    {
-
-      msg +=(typeof obj[property])+' '+property+' : '+obj[property]+' ;\n';
-
-    }
-
-  }
-
-  return msg;
-
-}
-
-
-
 function loginConn(nick,pass){
 
 	datos = "name="+nick+"&password="+pass;
@@ -55,9 +7,14 @@ function loginConn(nick,pass){
 		url: "http://192.168.1.68/watcher/login.php",
 		data: datos
 	}).done(function(msg ) {
-		alert(msg);
+		alert (msg)
+
+	location.href = "#menu"
+
 	});
 }
+
+
 
 function Buscar_Alumno(no_control){
 
@@ -70,13 +27,13 @@ function Buscar_Alumno(no_control){
 
 var Datos = JSON.parse (msg);
 
-alert (inspeccionar (Datos));
+
 
 
 $('#devic table td').eq(1).text(Datos['Nombre']);
-$('#devic table td').eq(3).text(Datos[Nombre]);
-$('#devic table td').eq(5).text();
-$('#devic table td').eq(7).text();
+$('#devic table td').eq(3).text(Datos['Grupo']);
+$('#devic table td').eq(5).text(Datos['Especialidad']);
+$('#devic table td').eq(7).text(Datos['Reportes']);
 
 
 	});
