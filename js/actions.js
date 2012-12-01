@@ -87,7 +87,7 @@ $(document).ready(function(e) {
     document.addEventListener("deviceready", function(){
 			$('.Send').tap(function(){
 		var formulario = $(this).parents('form');
-
+alert (formulario.attr('name'))
 	switch(formulario.attr('name'))
 	{
 		
@@ -95,7 +95,8 @@ $(document).ready(function(e) {
 			
 				var nick = formulario.children('input:eq(0)').val();
 				var pass = formulario.children('input:eq(1)').val();
-
+alert ("nick")
+alert (formulario.children('input:eq(0)').val())
 
 
 				loginConn(nick,pass);
