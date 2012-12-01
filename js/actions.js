@@ -18,14 +18,16 @@ function Buscar_Alumno(no_control){
 		type: "POST",
 		url: "http://192.168.1.68/watcher/buscar_alumno.php",
 		data: datos
-	}).done(function( msg ) {
+	}).done(function( msg) {
 
 alert (msg);
+
+
 
 $('#devic table td').eq(1).text("HOLA");
 $('#devic table td').eq(3).text("YO");
 $('#devic table td').eq(5).text(arreglo);
-$('#devic table td').eq(7).text(arreglo.firstName);
+$('#devic table td').eq(7).text(msg.Nombre);
 	});
 }
 
@@ -35,7 +37,7 @@ $(document).ready(function(e) {
     document.addEventListener("deviceready", function(){
 			$('.Send').tap(function(){
 		var formulario = $(this).parents('form');
-		alert (formulario.attr('name'))
+
 	switch(formulario.attr('name'))
 	{
 		
@@ -44,7 +46,7 @@ $(document).ready(function(e) {
 				var nick = formulario.children('input:eq(0)').val();
 				var pass = formulario.children('input:eq(1)').val();
 
-var time=new Date().getHours();
+//var time=new Date().getHours();
 
 				loginConn(nick,pass);
 
