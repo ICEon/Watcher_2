@@ -36,6 +36,8 @@ function loginConn(nick,pass){
 
 var Datos_Log = JSON.parse (msg);
 
+alert(Datos_Log['Valor'])
+
 switch (Datos_Log['Valor'])
 {
 case '1':
