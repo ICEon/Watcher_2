@@ -29,7 +29,10 @@ $(document).ready(function(e) {
     document.addEventListener("deviceready", function(){
 			$('.Send').tap(function(){
 		var formulario = $(this).parents('form');
-		switch(formulario.attr('name')){
+		alert (formulario.attr('name'))
+	switch(formulario.attr('name'))
+	{
+		
 			case 'login':
 			
 				var nick = formulario.children('input:eq(0)').val();
@@ -44,6 +47,7 @@ var time=new Date().getHours();
 				
 			case 'reporte':
 			
+
 			 			 Buscar_Alumno( formulario.children('input:eq(0)').val());			 
 
 			
