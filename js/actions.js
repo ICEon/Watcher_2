@@ -12,6 +12,7 @@ function loginConn(nick,pass){
 }
 
 $(document).ready(function(e) {
+	alert ("hola");
 	$('.Send').tap(function(){
 		var formulario = $(this).parents('form');
 		switch(formulario.attr('name')){
