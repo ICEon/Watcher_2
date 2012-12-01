@@ -22,8 +22,8 @@ function Buscar_Alumno(no_control){
 		var arreglo = { "firstName":"John" , "lastName":"Doe" };
 $('#devic table td').eq(1).text("HOLA");
 $('#devic table td').eq(3).text("YO");
-$('#devic table td').eq(5).text("arreglo");
-$('#devic table td').eq(7).text("arreglo.firstName");
+$('#devic table td').eq(5).text(arreglo);
+$('#devic table td').eq(7).text(arreglo.firstName);
 	});
 }
 
