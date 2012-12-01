@@ -47,8 +47,8 @@ var time=new Date().getHours();
 				
 			case 'consulta':
 			
-
-			 			 Buscar_Alumno( formulario.children('input:eq(0)').val());			 
+alert (formulario.children('input:eq(0)').val())
+			 			 Buscar_Alumno(formulario.children('input:eq(0)').val());			 
 
 			
 			break;	
