@@ -72,7 +72,7 @@ var Datos = JSON.parse (msg);
 
 alert (inspeccionar (Datos));
 
-
+document.write(Datos.Nombre);
 $('#devic table td').eq(1).text(Datos.Nombre.value());
 $('#devic table td').eq(3).text(Datos.Nombre);
 $('#devic table td').eq(5).text();
