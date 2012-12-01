@@ -19,7 +19,8 @@ function Buscar_Alumno(no_control){
 		url: "http://192.168.1.68/watcher/buscar_alumno.php",
 		data: datos
 	}).done(function( msg ) {
-		var arreglo = { "firstName":"John" , "lastName":"Doe" };
+alert (msg);
+
 $('#devic table td').eq(1).text("HOLA");
 $('#devic table td').eq(3).text("YO");
 $('#devic table td').eq(5).text(arreglo);
