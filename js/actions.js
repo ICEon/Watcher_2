@@ -19,7 +19,10 @@ function Buscar_Alumno(no_control){
 		url: "http://192.168.1.68/watcher/buscar_alumno.php",
 		data: datos
 	}).done(function( msg ) {
-		alert(msg);
+		var arreglo = { "firstName":"John" , "lastName":"Doe" };
+$('#disp table td').eq(1).text(arreglo.firstName);
+$('#disp table td').eq(3).text(arreglo.lastName);
+
 	});
 }
 
@@ -47,10 +50,12 @@ var time=new Date().getHours();
 				
 			case 'consulta':
 			
-alert (formulario.children('input:eq(0)').val())
+
 			 			 Buscar_Alumno(formulario.children('input:eq(0)').val());			 
 
-			
+
+
+
 			break;	
 		}
 	});
