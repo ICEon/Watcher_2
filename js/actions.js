@@ -1,6 +1,3 @@
-// JavaScript Document
-
-
 function loginConn(nick,pass){
 
 	datos = "name="+nick+"&password="+pass;
@@ -8,30 +5,11 @@ function loginConn(nick,pass){
 		type: "POST",
 		url: "http://192.168.1.68/watcher/login.php",
 		data: datos
-	}).done(function(msg ) {
-
-var Datos_Log = JSON.parse (msg);
-
-alert(Datos_Log['Valor'])
-
-switch (Datos_Log['Valor'])
-{
-case '1':
-alert ("Here 1");
-var tiempo=new Date().now();
-//    writeFiles(tiempo + Datos_Log['Usuario']);
-	location.href = "#menu"
-break;
-
-case '2':
-alert ("Here 2");
-	location.href = "#menu"
-break;
-
+	}).done(function(msg) {
+		alert (msg);
+			location.href = "#menu"
+});
 }
-	});
-}
-
 
 
 function Buscar_Alumno(no_control){
@@ -44,8 +22,6 @@ function Buscar_Alumno(no_control){
 	}).done(function(msg) {
 
 var Datos = JSON.parse (msg);
-
-
 
 
 $('#devic table td').eq(1).text(Datos['Nombre']);
