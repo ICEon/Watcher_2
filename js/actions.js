@@ -19,8 +19,8 @@ function Buscar_Alumno(no_control){
 		url: "http://192.168.1.68/watcher/buscar_alumno.php",
 		data: datos
 	}).done(function( msg) {
-
-var myObject = eval('(' + msg + ')');
+alert (msg);
+var myObject = JSON.parse (msg);
 
 
 
