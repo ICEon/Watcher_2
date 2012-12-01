@@ -4,6 +4,7 @@ function loginConn(nick,pass){
 	datos = "name="+nick+"&password="+pass;
 	$.ajax({
 		type: "POST",
+		contentType: "application/json; charset=utf-8",
 		url: "http://192.168.1.68/watcher/login.php",
 		data: datos
 	}).done(function( msg ) {
