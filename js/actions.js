@@ -7,10 +7,19 @@ function loginConn(nick,pass){
 		url: "http://192.168.1.68/watcher/login.php",
 		data: datos
 	}).done(function(msg ) {
-		alert (msg)
+
+switch (msg)
+{
+case 1:
 
 	location.href = "#menu"
+break;
 
+case 2:
+
+break;
+
+}
 	});
 }
 
