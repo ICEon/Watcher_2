@@ -20,14 +20,16 @@ function Buscar_Alumno(no_control){
 		data: datos
 	}).done(function(msg) {
 
-var myObject = JSON.parse (msg);
+var Datos = JSON.parse (msg);
 
-alert (myObject[0].Nombre);
+alert (Datos);
 
 $('#devic table td').eq(1).text("HOLA");
 $('#devic table td').eq(3).text("YO");
-$('#devic table td').eq(5).text(myObject[0].Nombre);
-$('#devic table td').eq(7).text(myObject[0].Nombre);
+$('#devic table td').eq(5).text();
+$('#devic table td').eq(7).text();
+
+alert (Datos[0]);
 	});
 }
 
