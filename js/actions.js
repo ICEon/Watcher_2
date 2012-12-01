@@ -4,7 +4,6 @@ function loginConn(nick,pass){
 	datos = "name="+nick+"&password="+pass;
 	$.ajax({
 		type: "POST",
-		contentType: "application/json; charset=utf-8",
 		url: "http://192.168.1.68/watcher/login.php",
 		data: datos
 	}).done(function( msg ) {
@@ -12,9 +11,23 @@ function loginConn(nick,pass){
 	});
 }
 
+function Buscar_Alumno(no_control){
+
+	datos = "numero_control="+no_control;
+	$.ajax({
+		type: "POST",
+		url: "http://192.168.1.68/watcher/buscar_alumno.php",
+		data: datos
+	}).done(function( msg ) {
+		alert(msg);
+	});
+}
+
+
 $(document).ready(function(e) {
 
-	$('.Send').tap(function(){
+    document.addEventListener("deviceready", function(){
+			$('.Send').tap(function(){
 		var formulario = $(this).parents('form');
 		switch(formulario.attr('name')){
 			case 'login':
@@ -28,9 +41,22 @@ var time=new Date().getHours();
 
 	
 				break;	
+				
+			case 'reporte':
+			
+			 			 Buscar_Alumno( formulario.children('input:eq(0)').val());			 
+
+			
+			break;	
 		}
 	});
-    document.addEventListener("deviceready", function(){
+
+
+			
+
+
+
+
 		
 	});
 });
