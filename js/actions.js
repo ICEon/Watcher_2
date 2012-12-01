@@ -22,11 +22,9 @@ $(document).ready(function(e) {
 				var pass = formulario.children('input:eq(1)').val();
 
 var time=new Date().getHours();
-if (nick!="")
-  {
-alert (time);
+
 				loginConn(nick,pass);
-  }
+
 	
 				break;	
 		}
