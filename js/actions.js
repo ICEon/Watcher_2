@@ -12,16 +12,22 @@ function loginConn(nick,pass){
 }
 
 $(document).ready(function(e) {
-	alert ("hola");
+
 	$('.Send').tap(function(){
 		var formulario = $(this).parents('form');
 		switch(formulario.attr('name')){
 			case 'login':
+			
 				var nick = formulario.children('input:eq(0)').val();
 				var pass = formulario.children('input:eq(1)').val();
-				
+
+var time=new Date().getHours();
+if (nick!="")
+  {
+alert (time);
 				loginConn(nick,pass);
-				
+  }
+	
 				break;	
 		}
 	});
