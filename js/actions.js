@@ -6,7 +6,7 @@ function loginConn(nick,pass){
 		type: "POST",
 		url: "http://192.168.1.68/watcher/login.php",
 		data: datos
-	}).done(function( msg ) {
+	}).done(function(msg ) {
 		alert(msg);
 	});
 }
@@ -18,11 +18,11 @@ function Buscar_Alumno(no_control){
 		type: "POST",
 		url: "http://192.168.1.68/watcher/buscar_alumno.php",
 		data: datos
-	}).done(function( msg) {
-alert (msg);
+	}).done(function(msg) {
+
 var myObject = JSON.parse (msg);
 
-
+alert (myObject);
 
 $('#devic table td').eq(1).text("HOLA");
 $('#devic table td').eq(3).text("YO");
