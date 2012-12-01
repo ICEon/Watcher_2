@@ -20,9 +20,10 @@ function Buscar_Alumno(no_control){
 		data: datos
 	}).done(function( msg ) {
 		var arreglo = { "firstName":"John" , "lastName":"Doe" };
-$('#disp table td').eq(1).text("HOLA");
-$('#disp table td').eq(3).text("YO");
-
+$('#devic table td').eq(1).text("HOLA");
+$('#devic table td').eq(3).text("YO");
+$('#devic table td').eq(5).text("arreglo");
+$('#devic table td').eq(7).text("arreglo.firstName");
 	});
 }
 
