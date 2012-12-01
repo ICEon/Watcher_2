@@ -1,29 +1,5 @@
 // JavaScript Document
 
-function writeFiles(c){
-
-window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem){
-fileSystem.root.getFile('log.txt', { create: true }, function(archivo){
-archivo.createWriter(function(escritor){
-escritor.onwrite = function(e){
-pgAlert("El archivo fue escrito Correctamente!");
-};
-//***********************
-escritor.seek(escritor.length);
-escritor.write(c);
-
-//***********************
-
-}, function(){
-pgAlert("No existe el archivo, agrega contenido y luego presiona en Escribir");
-});
-}, function(err){
-pgAlert("No se pudo acceder al sistema de archivos");
-});
-}, function(err){
-pgAlert("No se pudo acceder al sistema de archivos");
-});
-}
 
 function loginConn(nick,pass){
 
@@ -43,7 +19,7 @@ switch (Datos_Log['Valor'])
 case '1':
 alert ("Here 1");
 var tiempo=new Date().now();
-    writeFiles(tiempo + Datos_Log['Usuario']);
+//    writeFiles(tiempo + Datos_Log['Usuario']);
 	location.href = "#menu"
 break;
 
