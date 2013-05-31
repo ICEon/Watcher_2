@@ -1,9 +1,11 @@
+//url: "http://192.168.1.68/watcher/login.php",
+
 function loginConn(nick,pass){
 
 	datos = "name="+nick+"&password="+pass;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.68/watcher/login.php",
+		url: "http://cbtis16.net46.net/login.php",		
 		data: datos
 	}).done(function(msg) {
 		alert (msg);
